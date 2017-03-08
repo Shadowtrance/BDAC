@@ -74,8 +74,7 @@ namespace BDAC
 
         private void MainFrm_Resize(object sender, EventArgs e)
         {
-            //Send BDAC to tray when it minimizes if the tray option is checked
-            if (nMinBox.Checked && WindowState == FormWindowState.Normal)
+            if (WindowState == FormWindowState.Minimized)
             {
                 Hide();
                 traySystem.Visible = true;

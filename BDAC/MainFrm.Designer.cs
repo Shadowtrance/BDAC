@@ -35,7 +35,6 @@
             this.checkGameTimer = new System.Windows.Forms.Timer(this.components);
             this.checkAutoClose = new System.Windows.Forms.Timer(this.components);
             this.checkShutdown = new System.Windows.Forms.Timer(this.components);
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.minTimer = new System.Windows.Forms.Timer(this.components);
             this.themeContainer = new iTalk.iTalk_ThemeContainer();
             this.iTalk_ControlBox1 = new iTalk.iTalk_ControlBox();
@@ -91,12 +90,6 @@
             // 
             this.checkShutdown.Interval = 1000;
             this.checkShutdown.Tick += new System.EventHandler(this.checkShutdown_Tick);
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
             // 
             // minTimer
             // 
@@ -388,7 +381,6 @@
         public iTalk.iTalk_CheckBox nCloseDC;
         public iTalk.iTalk_CheckBox nMinBox;
         public System.Windows.Forms.NotifyIcon traySystem;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private iTalk.iTalk_Separator iTalk_Separator1;
         private iTalk.iTalk_SeparatorV iTalk_SeparatorV2;
         private iTalk.iTalk_Separator iTalk_Separator2;
