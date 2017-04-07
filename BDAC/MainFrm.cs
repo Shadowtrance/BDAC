@@ -27,7 +27,6 @@ namespace BDAC
 
             runLed.On = false;
             dcLed.On = false;
-            minTimelabel.Text = string.Empty;
         }
 
         private void MainFrm_Load(object sender, EventArgs e)
@@ -35,7 +34,8 @@ namespace BDAC
             if (!File.Exists(AppConfig.ConfigFile))
             {
                 Functions.Log("Settings file not found, creating a new one.");
-                Functions.CreateConfig();
+                ConfigManager.SaveConfig();
+
                 iTalk_TabControl1.SelectedTab = settingsTabPage;
             }
             else
@@ -49,17 +49,6 @@ namespace BDAC
 
                 Functions.Log("Settings Loaded.");
                 iTalk_TabControl1.SelectedTab = mainTabPage;
-            }
-
-            if (Functions.RunningAsAdmin())
-            {
-                themeContainer.Text = string.Format("{0}" + @" {1}", _assemblyName.Name, "- [Admin]");
-                Functions.Log("Running " + _assemblyName.Name + " as admin.");
-            }
-            else
-            {
-                themeContainer.Text = string.Format("{0}" + @" {1}", _assemblyName.Name, "- [Non-Admin]");
-                Functions.Log("Running " + _assemblyName.Name + " as non-admin.");
             }
         }
 
@@ -87,29 +76,7 @@ namespace BDAC
             Show();
             WindowState = FormWindowState.Normal;
             traySystem.Visible = false;
-            minTimelabel.Text = string.Empty;
-        }
-
-        #endregion
-
-        #region Settings Tab
-
-        private void nMinBox_CheckedChanged(object sender)
-        {
-            ConfigManager.Config.Tray = nMinBox.Checked;
-            ConfigManager.SaveConfig();
-        }
-
-        private void nCloseDC_CheckedChanged(object sender)
-        {
-            ConfigManager.Config.AutoClose = nCloseDC.Checked;
-            ConfigManager.SaveConfig();
-        }
-
-        private void nShutdownDC_CheckedChanged(object sender)
-        {
-            ConfigManager.Config.ShutDown = nShutdownDC.Checked;
-            ConfigManager.SaveConfig();
+            themeContainer.Text = _assemblyName.Name;
         }
 
         #endregion
@@ -149,7 +116,7 @@ namespace BDAC
                     startCheckBtn.Text = @"Start Monitoring";
                     checkGameTimer.Stop();
 
-                    minTimelabel.Text = string.Empty;
+                    themeContainer.Text = _assemblyName.Name;
                     minTimer.Stop();
                     Functions.Log("Stopped monitoring.");
                 }
@@ -191,12 +158,14 @@ namespace BDAC
                     runLbl.Text = @"Running";
                     runLed.On = true;
                     runLed.Color = Color.Green;
+                    Functions.Log("BDO is running...");
                     break;
                 case false:
                     runLbl.ForeColor = Color.Red;
                     runLbl.Text = @"Not Running";
                     runLed.On = true;
                     runLed.Color = Color.Red;
+                    Functions.Log("BDO is not running...");
                     break;
             }
 
@@ -208,6 +177,7 @@ namespace BDAC
                     traySystem.Text = @"BDAC - Connected";
                     dcLed.On = true;
                     dcLed.Color = Color.Green;
+                    Functions.Log("BDO is connected...");
                     break;
                 case false:
                     dcLbl.ForeColor = Color.Red;
@@ -215,6 +185,7 @@ namespace BDAC
                     traySystem.Text = @"BDAC - Disconnected";
                     dcLed.On = true;
                     dcLed.Color = Color.Red;
+                    Functions.Log("BDO is not connected...");
                     break;
             }
         }
@@ -262,7 +233,7 @@ namespace BDAC
                 return;
             }
 
-            startCheckBtn.Text = @"Shutting PC down in " + TimeSpan.FromSeconds(300 - ShutdownPc).ToString(@"mm\:ss") + @" minute(s) [Cancel]";
+            startCheckBtn.Text = @"Shutting PC down in " + TimeSpan.FromSeconds(300 - ShutdownPc).ToString(@"mm\:ss") + @" min(s) [Cancel]";
             ShutdownPc++;
         }
 
@@ -273,10 +244,32 @@ namespace BDAC
             {
                 Hide();
                 minTimer.Stop();
-                minTimelabel.Text = string.Empty;
+                themeContainer.Text = _assemblyName.Name;
             }
-            minTimelabel.Text = @"Minimizing in " + (5 - MinTime) + @" seconds";
+            themeContainer.Text = @"Minimizing in " + (5 - MinTime) + @" seconds";
             MinTime++;
+        }
+
+        #endregion
+
+        #region Settings Tab
+
+        private void nMinBox_CheckedChanged(object sender)
+        {
+            ConfigManager.Config.Tray = nMinBox.Checked;
+            ConfigManager.SaveConfig();
+        }
+
+        private void nCloseDC_CheckedChanged(object sender)
+        {
+            ConfigManager.Config.AutoClose = nCloseDC.Checked;
+            ConfigManager.SaveConfig();
+        }
+
+        private void nShutdownDC_CheckedChanged(object sender)
+        {
+            ConfigManager.Config.ShutDown = nShutdownDC.Checked;
+            ConfigManager.SaveConfig();
         }
 
         #endregion

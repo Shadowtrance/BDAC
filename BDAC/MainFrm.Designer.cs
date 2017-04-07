@@ -40,7 +40,6 @@
             this.iTalk_ControlBox1 = new iTalk.iTalk_ControlBox();
             this.iTalk_TabControl1 = new iTalk.iTalk_TabControl();
             this.mainTabPage = new System.Windows.Forms.TabPage();
-            this.minTimelabel = new iTalk.iTalk_Label();
             this.startCheckBtn = new iTalk.iTalk_Button_2();
             this.iTalk_SeparatorV2 = new iTalk.iTalk_SeparatorV();
             this.iTalk_Separator1 = new iTalk.iTalk_Separator();
@@ -109,7 +108,7 @@
             this.themeContainer.Padding = new System.Windows.Forms.Padding(3, 28, 3, 28);
             this.themeContainer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.themeContainer.Sizable = false;
-            this.themeContainer.Size = new System.Drawing.Size(454, 210);
+            this.themeContainer.Size = new System.Drawing.Size(434, 188);
             this.themeContainer.SmartBounds = false;
             this.themeContainer.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.themeContainer.TabIndex = 0;
@@ -119,7 +118,7 @@
             // 
             this.iTalk_ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_ControlBox1.Location = new System.Drawing.Point(373, -1);
+            this.iTalk_ControlBox1.Location = new System.Drawing.Point(353, -1);
             this.iTalk_ControlBox1.Name = "iTalk_ControlBox1";
             this.iTalk_ControlBox1.Size = new System.Drawing.Size(77, 19);
             this.iTalk_ControlBox1.TabIndex = 5;
@@ -138,14 +137,13 @@
             this.iTalk_TabControl1.Multiline = true;
             this.iTalk_TabControl1.Name = "iTalk_TabControl1";
             this.iTalk_TabControl1.SelectedIndex = 0;
-            this.iTalk_TabControl1.Size = new System.Drawing.Size(448, 154);
+            this.iTalk_TabControl1.Size = new System.Drawing.Size(428, 132);
             this.iTalk_TabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.iTalk_TabControl1.TabIndex = 0;
             // 
             // mainTabPage
             // 
             this.mainTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.mainTabPage.Controls.Add(this.minTimelabel);
             this.mainTabPage.Controls.Add(this.startCheckBtn);
             this.mainTabPage.Controls.Add(this.iTalk_SeparatorV2);
             this.mainTabPage.Controls.Add(this.iTalk_Separator1);
@@ -160,21 +158,9 @@
             this.mainTabPage.Location = new System.Drawing.Point(124, 4);
             this.mainTabPage.Name = "mainTabPage";
             this.mainTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.mainTabPage.Size = new System.Drawing.Size(320, 146);
+            this.mainTabPage.Size = new System.Drawing.Size(300, 124);
             this.mainTabPage.TabIndex = 0;
             this.mainTabPage.Text = "Main";
-            // 
-            // minTimelabel
-            // 
-            this.minTimelabel.AutoSize = true;
-            this.minTimelabel.BackColor = System.Drawing.Color.Transparent;
-            this.minTimelabel.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.minTimelabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.minTimelabel.Location = new System.Drawing.Point(6, 83);
-            this.minTimelabel.Name = "minTimelabel";
-            this.minTimelabel.Size = new System.Drawing.Size(67, 13);
-            this.minTimelabel.TabIndex = 14;
-            this.minTimelabel.Text = "iTalk_Label1";
             // 
             // startCheckBtn
             // 
@@ -184,9 +170,9 @@
             this.startCheckBtn.ForeColor = System.Drawing.Color.White;
             this.startCheckBtn.Image = null;
             this.startCheckBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.startCheckBtn.Location = new System.Drawing.Point(3, 105);
+            this.startCheckBtn.Location = new System.Drawing.Point(3, 83);
             this.startCheckBtn.Name = "startCheckBtn";
-            this.startCheckBtn.Size = new System.Drawing.Size(314, 38);
+            this.startCheckBtn.Size = new System.Drawing.Size(294, 38);
             this.startCheckBtn.TabIndex = 4;
             this.startCheckBtn.Text = "Start Monitoring";
             this.startCheckBtn.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -198,7 +184,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.iTalk_SeparatorV2.Location = new System.Drawing.Point(240, 3);
             this.iTalk_SeparatorV2.Name = "iTalk_SeparatorV2";
-            this.iTalk_SeparatorV2.Size = new System.Drawing.Size(10, 96);
+            this.iTalk_SeparatorV2.Size = new System.Drawing.Size(10, 71);
             this.iTalk_SeparatorV2.TabIndex = 11;
             this.iTalk_SeparatorV2.Text = "iTalk_SeparatorV2";
             // 
@@ -206,7 +192,7 @@
             // 
             this.iTalk_Separator1.Location = new System.Drawing.Point(9, 32);
             this.iTalk_Separator1.Name = "iTalk_Separator1";
-            this.iTalk_Separator1.Size = new System.Drawing.Size(305, 10);
+            this.iTalk_Separator1.Size = new System.Drawing.Size(278, 10);
             this.iTalk_Separator1.TabIndex = 9;
             this.iTalk_Separator1.Text = "iTalk_Separator1";
             // 
@@ -217,7 +203,7 @@
             this.dcLed.Location = new System.Drawing.Point(256, 45);
             this.dcLed.Name = "dcLed";
             this.dcLed.On = true;
-            this.dcLed.Size = new System.Drawing.Size(23, 23);
+            this.dcLed.Size = new System.Drawing.Size(23, 27);
             this.dcLed.TabIndex = 6;
             this.dcLed.Text = "led2";
             // 
@@ -228,7 +214,7 @@
             this.runLed.Location = new System.Drawing.Point(256, 7);
             this.runLed.Name = "runLed";
             this.runLed.On = true;
-            this.runLed.Size = new System.Drawing.Size(23, 23);
+            this.runLed.Size = new System.Drawing.Size(23, 27);
             this.runLed.TabIndex = 5;
             this.runLed.Text = "led1";
             // 
@@ -284,7 +270,7 @@
             // 
             this.iTalk_Separator2.Location = new System.Drawing.Point(8, 70);
             this.iTalk_Separator2.Name = "iTalk_Separator2";
-            this.iTalk_Separator2.Size = new System.Drawing.Size(306, 10);
+            this.iTalk_Separator2.Size = new System.Drawing.Size(279, 10);
             this.iTalk_Separator2.TabIndex = 13;
             this.iTalk_Separator2.Text = "iTalk_Separator2";
             // 
@@ -298,7 +284,7 @@
             this.settingsTabPage.Location = new System.Drawing.Point(124, 4);
             this.settingsTabPage.Name = "settingsTabPage";
             this.settingsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.settingsTabPage.Size = new System.Drawing.Size(320, 146);
+            this.settingsTabPage.Size = new System.Drawing.Size(300, 124);
             this.settingsTabPage.TabIndex = 2;
             this.settingsTabPage.Text = "Settings";
             // 
@@ -309,7 +295,7 @@
             this.nShutdownDC.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nShutdownDC.Location = new System.Drawing.Point(15, 63);
             this.nShutdownDC.Name = "nShutdownDC";
-            this.nShutdownDC.Size = new System.Drawing.Size(299, 15);
+            this.nShutdownDC.Size = new System.Drawing.Size(279, 15);
             this.nShutdownDC.TabIndex = 2;
             this.nShutdownDC.Text = "Shutdown PC after 5 min. of disconnection";
             this.nShutdownDC.CheckedChanged += new iTalk.iTalk_CheckBox.CheckedChangedEventHandler(this.nShutdownDC_CheckedChanged);
@@ -321,7 +307,7 @@
             this.nCloseDC.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nCloseDC.Location = new System.Drawing.Point(15, 37);
             this.nCloseDC.Name = "nCloseDC";
-            this.nCloseDC.Size = new System.Drawing.Size(299, 15);
+            this.nCloseDC.Size = new System.Drawing.Size(280, 15);
             this.nCloseDC.TabIndex = 1;
             this.nCloseDC.Text = "Close BDO 1 min. after disconnection";
             this.nCloseDC.CheckedChanged += new iTalk.iTalk_CheckBox.CheckedChangedEventHandler(this.nCloseDC_CheckedChanged);
@@ -333,7 +319,7 @@
             this.nMinBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.nMinBox.Location = new System.Drawing.Point(15, 11);
             this.nMinBox.Name = "nMinBox";
-            this.nMinBox.Size = new System.Drawing.Size(299, 15);
+            this.nMinBox.Size = new System.Drawing.Size(280, 15);
             this.nMinBox.TabIndex = 0;
             this.nMinBox.Text = "Minimize BD Auto Closer to tray after 5 sec";
             this.nMinBox.CheckedChanged += new iTalk.iTalk_CheckBox.CheckedChangedEventHandler(this.nMinBox_CheckedChanged);
@@ -342,7 +328,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 210);
+            this.ClientSize = new System.Drawing.Size(434, 188);
             this.Controls.Add(this.themeContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -388,7 +374,6 @@
         public System.Windows.Forms.Timer checkAutoClose;
         public System.Windows.Forms.Timer checkShutdown;
         public iTalk.iTalk_Button_2 startCheckBtn;
-        private iTalk.iTalk_Label minTimelabel;
         private System.Windows.Forms.Timer minTimer;
     }
 }
