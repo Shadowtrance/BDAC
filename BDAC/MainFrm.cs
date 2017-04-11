@@ -158,14 +158,12 @@ namespace BDAC
                     runLbl.Text = @"Running";
                     runLed.On = true;
                     runLed.Color = Color.Green;
-                    Functions.Log("BDO is running...");
                     break;
                 case false:
                     runLbl.ForeColor = Color.Red;
                     runLbl.Text = @"Not Running";
                     runLed.On = true;
                     runLed.Color = Color.Red;
-                    Functions.Log("BDO is not running...");
                     break;
             }
 
@@ -177,7 +175,6 @@ namespace BDAC
                     traySystem.Text = @"BDAC - Connected";
                     dcLed.On = true;
                     dcLed.Color = Color.Green;
-                    Functions.Log("BDO is connected...");
                     break;
                 case false:
                     dcLbl.ForeColor = Color.Red;
@@ -185,7 +182,6 @@ namespace BDAC
                     traySystem.Text = @"BDAC - Disconnected";
                     dcLed.On = true;
                     dcLed.Color = Color.Red;
-                    Functions.Log("BDO is not connected...");
                     break;
             }
         }
